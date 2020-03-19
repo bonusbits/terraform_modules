@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+echo ''
+echo 'INFO: STARTING USER DATA SCRIPT...'
+echo ''
+
+yum update
+yum upgrade -y
+
+# Tag for tailing file to know when done
+echo 'USER DATA COMPLETED'

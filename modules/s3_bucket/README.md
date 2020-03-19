@@ -1,1 +1,0 @@
-## AWS Simple Storage Service Bucket Creation Module

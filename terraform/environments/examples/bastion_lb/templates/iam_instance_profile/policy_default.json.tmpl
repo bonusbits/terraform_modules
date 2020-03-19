@@ -1,0 +1,21 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": [
+        "cloudwatch:PutMetricData"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "logs:PutLogEvents",
+        "logs:CreateLogStream",
+        "logs:DescribeLogStreams"
+      ],
+      "Resource": "${cloudwatch_logs_group_arn}",
+      "Effect": "Allow"
+    }
+  ]
+}
