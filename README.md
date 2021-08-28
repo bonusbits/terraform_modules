@@ -1,6 +1,6 @@
-[![Project Release](https://img.shields.io/badge/release-v1.0.0-blue.svg)](https://github.com/bonusbits/terraform_aws_orchestrator)
-[![Circle CI](https://circleci.com/gh/bonusbits/terraform_aws_orchestrator/tree/master.svg?style=shield)](https://circleci.com/gh/bonusbits/terraform_aws_orchestrator/tree/master)
-[![GitHub issues](https://img.shields.io/github/issues/bonusbits/terraform_aws_orchestrator.svg)](https://github.com/bonusbits/terraform_aws_orchestrator/issues)
+[![Project Release](https://img.shields.io/badge/release-v1.0.0-blue.svg)](https://github.com/bonusbits/bonusbits_orchestrator)
+[![Circle CI](https://circleci.com/gh/bonusbits/bonusbits_orchestrator/tree/master.svg?style=shield)](https://circleci.com/gh/bonusbits/bonusbits_orchestrator/tree/master)
+[![GitHub issues](https://img.shields.io/github/issues/bonusbits/bonusbits_orchestrator.svg)](https://github.com/bonusbits/bonusbits_orchestrator/issues)
 
 # Purpose
 Various Terraform Modules, configurations and tfvar examples. Rake tasks are used from the root directory to simplify usage of the project. Mostly this project is a good central location for real-world Terraform references, but very functional as well.
