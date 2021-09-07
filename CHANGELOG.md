@@ -1,6 +1,9 @@
 ## CHANGE LOG
 BonusBits Orchestrator
 
+## 2.1.1 - 09/07/2021 - Levon Becker
+* Documentation updates to get caught up to this point
+
 ## 2.1.0 - 09/07/2021 - Levon Becker
 #### Minor Release: EIP Bastion
 * Fixed bastion/login to get eip public ip correctly in orchestrator

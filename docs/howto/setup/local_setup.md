@@ -1,5 +1,4 @@
-#### Last Updated v2.0.0 (08/25/2021)
-
+#### Last Updated v2.1.1 (09/07/2021)
 # HowTo: Setup Local Workstation
 These are the steps to setup your devops workstation or CI worker to use the Orchestrator Tool.
 
@@ -16,7 +15,7 @@ These are the steps to setup your devops workstation or CI worker to use the Orc
 | JQ              | 1.6 |
 | Kubectl         | 1.21.4 |
 | Packer         | 1.7.4 |
-| Terraform       | 1.0.5ra |
+| Terraform       | 1.0.5 |
 
 ### RubyGems
 | Gem | Version |
@@ -36,7 +35,7 @@ These are the steps to setup your devops workstation or CI worker to use the Orc
 * macOS ```brew install awscli```
 
 ### Chef Workstation
-This is for Ruby and various gems that are bundled in Chef Workstation. This keeps us all on the same page and stages us for furture configuration management.
+This is for Ruby and various gems that are bundled in Chef Workstation. This keeps us all on the same page and stages us for future configuration management.
 
 1. Install Chef Workstation binary
     * macOS
@@ -69,12 +68,12 @@ This is for Ruby and various gems that are bundled in Chef Workstation. This kee
 ## Set Environment Variables
 | Variable Name | Description |
 | :--- | :--- |
-| BB_ORCHESTRATOR_PATH          | Path to root of development repo
-| AWS_PROFILE                   | AWS CLI profile config profile name
-| AWS_REGION                    | AWS Region name
-| KUBECONFIG                    | i.e. /../devops/orchestrator/vars/secrets/bonusbits_dev/kubectl
-| KUBE_CONFIG_PATH              | i.e. /../devops/orchestrator/vars/secrets/bonusbits_dev/kubectl
-| TF_WORKSPACE                  | Terraform workspace and config names
+| BB_ORCHESTRATOR_PATH          | Path to root of development repo |
+| AWS_PROFILE                   | AWS CLI profile config profile name |
+| AWS_REGION                    | AWS Region name |
+| KUBECONFIG                    | i.e. /../devops/orchestrator/vars/secrets/$TF_WORKSPACE/kubectl |
+| KUBE_CONFIG_PATH              | i.e. /../devops/orchestrator/vars/secrets/$TF_WORKSPACE/kubectl |
+| TF_WORKSPACE                  | Terraform workspace and config names |
 
 #### Example Bash Profile
 ```bash
@@ -101,11 +100,11 @@ cd-bb-orch
 ################################################################################
 # Kubernetes
 ################################################################################
-function bb-local-kubeconfig {
+function kubeconfig-local {
     export KUBECONFIG="$HOME/.kube/config"
     export KUBE_CONFIG_PATH="${KUBECONFIG}"
 }
-function bb-eks-kubeconfig {
+function kubeconfig-eks {
     export KUBECONFIG="${BB_ORCHESTRATOR_PATH}/vars/secrets/${TF_WORKSPACE}/kubectl"
     export KUBE_CONFIG_PATH="${KUBECONFIG}"
 }
@@ -152,30 +151,30 @@ function bb-env {
   env | grep TF_
 }
 
-function bb-vars-local {
+function bb-dev-use1 {
     clear-vars
-    export AWS_PROFILE=bonusbits
-    export AWS_REGION=us-west-2
-    export TF_WORKSPACE="bonusbits_local"
-    bb-local-kubeconfig
+    export AWS_PROFILE=bb
+    export AWS_REGION=us-east-1
+    export TF_WORKSPACE="bb-dev-use1"
+    kubeconfig-eks
 }
 
-function bb-vars-dev-usw2 {
+function bb-dev-usw2 {
     clear-vars
-    export AWS_PROFILE=bonusbits
+    export AWS_PROFILE=bb
     export AWS_REGION=us-west-2
-    export TF_WORKSPACE="bonusbits_dev"
-    bb-eks-kubeconfig
+    export TF_WORKSPACE="bb-dev-usw2"
+    kubeconfig-eks
 }
 
-function bb-vars-prd-usw2 {
+function bb-prd-usw2 {
     clear-vars
-    export AWS_PROFILE=bonusbits
+    export AWS_PROFILE=bb
     export AWS_REGION=us-west-2
-    export TF_WORKSPACE="bonusbits_prd"
-    bb-eks-kubeconfig
+    export TF_WORKSPACE="bb-prd-usw2"
+    kubeconfig-eks
 }
-bb-vars-dev-usw2
+bb-dev-use1
 ```
 
 ## Git Repo
