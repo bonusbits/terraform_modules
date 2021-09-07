@@ -22,6 +22,10 @@ terraform:
     - network
     - cloudwatch_logs
     - bastion
+    - eks_cluster
+    - eks_compute
+    - eks_ingress_controller
+    - eks_apps
   tfvar_roles_path: vars/terraform/bb-dev-usw2
   shared_tfvar_files:
     - vars/secrets/bb-shared/access_lists.tfvars

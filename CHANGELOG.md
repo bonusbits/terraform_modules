@@ -1,6 +1,30 @@
 ## CHANGE LOG
 BonusBits Orchestrator
 
+## 2.2.0 - 09/07/2021 - Levon Becker
+#### Minor Release: EKS + K8S
+* Added EKS modules
+  * eks_cluster
+  * eks_fargate_profile
+  * eks_fargate_role
+  * eks_ingress_controller
+  * eks_node_group
+* Added Kubernetes modules
+  * k8s_deployment
+  * k8s_ingress
+  * k8s_namespace
+  * k8s_service
+  * k8s_service_account
+* Added ecr_tags module
+  * Can return the latest docker image name from ECR
+* Upgrade aws provider min version v3.55 > v3.57
+* Added example Terraform roles for EKS
+  * eks_cluster
+  * eks_compute
+* Added example Terraform roles for Kubernetes
+  * eks_apps
+  * eks_ingress_controller
+
 ## 2.1.1 - 09/07/2021 - Levon Becker
 * Documentation updates to get caught up to this point
 

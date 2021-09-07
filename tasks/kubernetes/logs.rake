@@ -9,16 +9,6 @@ namespace :kubernetes do
   end
 end
 
-desc 'Alias (kubernetes:logs:deployment[cert-manager,deployment.app/cert-manager])'
-task :k8s_logs_cert_manager do
-  Rake::Task['kubernetes:logs:deployment'].invoke('cert-manager', 'deployment.app/cert-manager')
-end
-
-desc 'Alias (kubernetes:logs:deployment[cert-manager,deployment.app/cert-manager])'
-task :k8s_logs_cert_manager_f do
-  Rake::Task['kubernetes:logs:deployment'].invoke('cert-manager', 'deployment.app/cert-manager', true)
-end
-
 desc 'Alias (kubernetes:logs:deployment[kube-system,deployment.apps/aws-load-balancer-controller])'
 task :k8s_logs_ingress_controller do
   Rake::Task['kubernetes:logs:deployment'].invoke('kube-system', 'deployment.apps/aws-load-balancer-controller')

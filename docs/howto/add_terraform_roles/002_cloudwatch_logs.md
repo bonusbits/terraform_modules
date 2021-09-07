@@ -1,4 +1,4 @@
-#### Last Updated v2.1.1 (09/07/2021)
+#### Last Updated v2.2.0 (09/07/2021)
 # HowTo: Add Cloudwatch Log Groups Role
 
 ## Prerequisites
@@ -59,6 +59,6 @@ cloudwatch_logs = {
 
 ## Create Network
 1. ```rake init[cloudwatch_logs]```
-   1. Select 1 <enter>
+   1. ```1 <enter>```
 2. ```rake plan[cloudwatch_logs]```
 3. ```rake apply[cloudwatch_logs]```
