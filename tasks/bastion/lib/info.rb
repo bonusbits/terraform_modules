@@ -10,7 +10,7 @@ module Orchestrator
           public_ip = state['load_balancer']['value']['dns_name']
           public_type = 'load_balancer'
         elsif state['eip']
-          public_ip = state['eip_public_ips']['value'][0]
+          public_ip = state['eip']['value']['eip']['public_ip']
           public_type = 'eip'
         else
           public_ip = state['ec2_instance']['value']['instance']['public_ip']

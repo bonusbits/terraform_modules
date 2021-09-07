@@ -1,6 +1,11 @@
 ## CHANGE LOG
 BonusBits Orchestrator
 
+## 2.1.0 - 09/07/2021 - Levon Becker
+#### Minor Release: EIP Bastion
+* Fixed bastion/login to get eip public ip correctly in orchestrator
+* Added bastion ec2 with public eip access instead of load balancer terraform role example bastion_eip
+
 ## 2.0.0 - 09/06/2021 - Levon Becker
 #### Major Release: Refactor - Fully Functioning
 * Refactored a lot

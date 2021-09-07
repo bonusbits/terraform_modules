@@ -6,7 +6,7 @@ module Orchestrator
         results = if state['load_balancer']
                     state['load_balancer']['value']['dns_name']
                   elsif state['eip']
-                    state['eip_public_ips']['value'][0]
+                    state['eip']['value']['eip']['public_ip']
                   else
                     state['ec2_instance']['value']['instance']['public_ip']
                   end
