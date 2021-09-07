@@ -4,7 +4,7 @@
 
 ## Prerequisites
 * [Local Setup](./local_setup.md)
-* [Create Terraform State Files Bucket](./create_s3_bucket_terraform_state_files.md)
+* [Create Terraform State Files Bucket](./s3_bucket_tfvars.md)
 
 ### Display Current Orchestrator Environment
 ```bash
@@ -17,7 +17,7 @@ rake info
 ```
 
 ### List All Rake Tasks
-[Rake Task List](../reference/rake_task_list.md)
+[Rake Task List](../../reference/rake_task_list.md)
 
 ```bash
 rake -T
@@ -64,4 +64,4 @@ rake stop_bastion
 rake start_bastion
 ```
 
-Additional Examples [here](../reference/addtional_usage_examples.md)
+Additional Examples [here](../../reference/addtional_usage_examples.md)

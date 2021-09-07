@@ -18,5 +18,5 @@ Ruby CLI Wrapper for AWS, Chef, Docker, Terraform, Helm, Kubectl and Packer. Can
 
 ### Add Terraform Roles
 Add Terraform Roles to customize your environment
-* [Cloudwatch Log Groups](./docs/howto/add_terraform_roles/001_cloudwatch_logs.md)
-* [Bastion](./docs/howto/add_terraform_roles/002_bastion.md)
+* [Cloudwatch Log Groups](./docs/howto/add_terraform_roles/002_cloudwatch_logs.md)
+* [Bastion](./docs/howto/add_terraform_roles/003_bastion.md)

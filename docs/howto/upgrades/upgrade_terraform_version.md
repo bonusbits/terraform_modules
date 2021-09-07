@@ -55,7 +55,7 @@ Now we take that latest versions of the plugins and Terraform and set that as th
            }
          }
          ```
-2. Update versions in [Local Setup](./local_setup.md)
+2. Update versions in [Local Setup](../setup/local_setup.md)
 
 ## Refresh all Roles
 Now we need to run terraform refresh on all the roles for each stack. 

@@ -4,7 +4,7 @@
 It takes about 30 minutes and does cause a brief outage.
 
 ## Prerequisites
-* [Local Setup](./local_setup.md)
+* [Local Setup](../setup/local_setup.md)
 
 ## Set eks.tfvars
 1.20 first, then 1.21
