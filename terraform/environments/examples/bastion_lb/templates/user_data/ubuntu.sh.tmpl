@@ -1,0 +1,174 @@
+#!/usr/bin/env bash
+
+echo ''
+echo 'INFO: STARTING USER DATA SCRIPT...'
+echo ''
+
+################################################################################
+# Variables
+################################################################################
+download_path="/tmp"
+
+################################################################################
+# Host File
+################################################################################
+echo ''
+echo 'INFO: Configure Host File'
+echo ''
+
+host_ip=$(hostname -I)
+# TODO: Change to conditional check and add with maybe sed
+hosts_file=$(cat <<HEREDOC
+127.0.0.1 localhost
+$host_ip ${hostname}.bonusbits.local ${hostname}
+
+# The following lines are desirable for IPv6 capable hosts
+::1 ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+ff02::3 ip6-allhosts
+HEREDOC
+)
+echo "$hosts_file" > /etc/hosts
+
+echo "${hostname}" > /etc/hostname
+hostname "${hostname}"
+hostnamectl set-hostname "${hostname}.bonusbits.local"
+
+#################################################################################
+## Default Editor
+#################################################################################
+#echo ''
+#echo 'INFO: Set Default Editor to VIM'
+#echo ''
+#echo 'EDITOR=vim' >> /etc/environment
+#
+#################################################################################
+## Base Packages
+#################################################################################
+#echo ''
+#echo 'INFO: Install Base Packages'
+#echo ''
+#apt-get update
+#apt-get upgrade -y
+#apt-get install -y bash-completion curl git gzip htop net-tools openssl procps sudo util-linux vim wget which
+#
+#################################################################################
+## AWS CLI 2.x
+#################################################################################
+#echo ''
+#echo 'INFO: Install AWS CLI 2.x'
+#echo ''
+#function display_awscli_version() {
+#  /usr/local/bin/aws --version | grep -o 'aws-cli\/[0-9]\+\.[0-9]\+\.[0-9]\+' | grep -o '[0-9]\+\.[0-9]\+\.[0-9]\+'
+#}
+#
+#echo ''
+#echo 'INFO: AWS CLI Version Before'
+#display_awscli_version
+#
+#echo ''
+#echo "INFO: Cleanup v1.x"
+#[[ -d "/tmp/awscli-bundle" ]] && sudo rm -rf /tmp/awscli-bundle
+#[[ -a "/tmp/awscli-bundle.zip" ]] && sudo rm -rf /tmp/awscli-bundle.zip
+#echo ''
+#echo "INFO: Remove Old Install"
+#sudo rm -f /usr/local/bin/aws
+#sudo rm -f /usr/local/aws-cli
+#sudo rm -f /usr/local/bin/aws_completer
+#sudo rm -rf /usr/local/aws
+#sudo rm -f /usr/bin/aws
+#
+#echo ''
+#echo "INFO: Download AWS CLI 2.x Zip"
+#download_retries=1
+#until [ $download_retries -ge 6 ]; do
+#    echo "INFO: Attempt ($download_retries)"
+#    [[ -a "/tmp/awscliv2.zip" ]] && sudo rm -f /tmp/awscliv2.zip
+#    sudo curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "/tmp/awscliv2.zip" && break
+#    download_retries=$[$download_retries+1]
+#    echo "ERROR: Sleeping 10..."
+#    sleep 10
+#done
+#
+#echo ''
+#echo "INFO: Unzip AWS CLI 2.x Bundle"
+#unzip_retries=1
+#until [ $unzip_retries -ge 6 ]; do
+#    echo "INFO: Attempt ($unzip_retries)"
+#    [[ -d "/tmp/aws" ]] && sudo rm -rf /tmp/aws
+#    sudo unzip -oq /tmp/awscliv2.zip -d /tmp && break
+#    unzip_retries=$[$unzip_retries+1]
+#    echo "ERROR: Sleeping 10..."
+#    sleep 10
+#done
+#
+#echo ''
+#echo "INFO: Install/Upgrade AWS CLI 2.x Bundle"
+#install_retries=1
+#until [ $install_retries -ge 6 ]; do
+#    echo "INFO: Attempt ($install_retries)"
+#    sudo /tmp/aws/install --bin-dir /usr/local/bin --install-dir /usr/local/aws --update && break
+#    install_retries=$[$install_retries+1]
+#    echo "ERROR: Sleeping 10..."
+#    sleep 10
+#done
+#
+#echo ''
+#echo 'INFO: AWS CLI Version After'
+#display_awscli_version
+#
+#################################################################################
+## Chef Workstation Install
+#################################################################################
+#function display_chefws_version() {
+#  cat /opt/chef-workstation/version-manifest.json | jq '.build_version' | grep -o '[0-9]\+\.[0-9]\+\.[0-9]\+'
+#}
+#
+#function download_chefws() {
+#  echo ''
+#  echo 'INFO: Downloading ChefWS Deb Package'
+#  mkdir -p $download_path
+#  wget https://packages.chef.io/files/stable/chef-workstation/${chef_ws_version}/ubuntu/20.04/chef-workstation_${chef_ws_version}-1_amd64.deb -P $download_path
+#}
+#
+#function install_chefws() {
+#  echo ''
+#  echo 'INFO: Install/Upgrade Chef Workstation'
+#  sudo dpkg -i $download_path/chef-workstation_${chef_ws_version}-1_amd64.deb
+#}
+#
+## Run
+#echo ''
+#echo 'INFO: Chef Workstation Version Before'
+#display_chefws_version
+#download_chefws
+#install_chefws
+#echo ''
+#echo 'INFO: Chef Workstation Version After'
+#display_chefws_version
+#echo 'eval "$(chef shell-init bash)"' >> /home/ubuntu/.bash_profile
+#
+#################################################################################
+## JQ Install
+#################################################################################
+#function display_jq_version() {
+#  /usr/bin/jq --version | grep -o 'jq-[0-9]\+\.[0-9]\+' | cut -c4-
+#}
+#
+#echo ''
+#echo 'INFO: JQ Version Before'
+#display_jq_version
+#
+#echo ''
+#echo "INFO: Install JQ"
+#sudo apt-get -y install jq
+#
+#echo ''
+#echo 'INFO: JQ Version After'
+#display_jq_version
+
+# Tag for tailing file to know when done
+echo 'USER DATA COMPLETED'

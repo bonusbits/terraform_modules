@@ -1,0 +1,17 @@
+terraform {
+  required_version        = "~> 1.0.5"
+  required_providers {
+    local                 = {
+      source              = "hashicorp/local"
+      version             = "~> 1.4"
+    }
+    template              = {
+      source              = "hashicorp/template"
+      version             = "~> 2.2"
+    }
+    aws                   = {
+      source              = "hashicorp/aws"
+      version             = "~> 3.55"
+    }
+  }
+}

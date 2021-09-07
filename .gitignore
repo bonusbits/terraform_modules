@@ -43,6 +43,5 @@ pkg/
 **/*_override.tf.json
 **/*tfplan*
 
-# Local
-**/bonusbits/**
-**/*bonusbits*
+# Orchestrator
+vars/secrets/*

@@ -1,0 +1,31 @@
+bastion:
+  login_user: ec2-user
+  ssh_key_name: bastion
+
+bonusbits:
+  ami_save_count: 2
+  web_backup: true # For Testing
+
+orchestrator:
+  environment: bonusbits
+  feature_toggles:
+    debug: false
+    skip_all_prompts: true
+    use_secrets_manager: true
+
+secrets:
+  secrets_manager:
+    name: bb-dev-use1-devops
+
+terraform:
+  roles:
+    - network
+    - cloudwatch_logs
+    - bastion
+  tfvar_roles_path: vars/terraform/bb-dev-use1
+  shared_tfvar_files:
+    - vars/secrets/bb-shared/access_lists.tfvars
+  s3_backend:
+    bucket: bonusbits-tfs
+    region: us-west-2
+    key_prefix: workspaces

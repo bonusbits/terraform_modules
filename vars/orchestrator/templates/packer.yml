@@ -1,0 +1,4 @@
+packer:
+  image_name_prepend: <string>
+  region_list:
+    - <list of aws region to copy ami too>

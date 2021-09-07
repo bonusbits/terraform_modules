@@ -1,1 +1,0 @@
-## AWS Autoscale Group & Launch Configuration CloudFormation Module
