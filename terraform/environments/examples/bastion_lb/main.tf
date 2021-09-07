@@ -48,16 +48,6 @@ module "ec2_instance" {
   user_data                     = local.user_data
 }
 
-# Elastic IP - Cheaper than an unneeded load balancer
-//module "eip" {
-//  base_aws_tags                 = module.aws_tags.aws_tags
-//  depends_on                    = [module.ec2_instance]
-//  ec2_instance_id               = module.ec2_instance.instance.id
-//  name                          = "${terraform.workspace}-bastion"
-//  source                        = "../../../modules/eip"
-//  vpc                           = true
-//}
-
 module "load_balancer" {
   base_aws_tags                 = module.aws_tags.aws_tags
   name                          = "${terraform.workspace}-bastion"
