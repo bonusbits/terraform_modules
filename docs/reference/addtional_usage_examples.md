@@ -1,6 +1,6 @@
 #### Last Updated v2.0.0 (08/25/2021)
 
-# Additional Usage Examples (WIP)
+# Additional Usage Examples
 Rake commands should be ran from the root of terraform directory.
 
 ## Basics
