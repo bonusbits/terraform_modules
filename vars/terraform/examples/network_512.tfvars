@@ -9,11 +9,15 @@ network = {
     setup_az_count              = "3"
     dhcp_domain_name            = "bonusbits.local"
     dns_domain_name             = "bonusbits.local"
-    # 20 + 3 = /23 = "172.16.0.0/23","172.16.2.0/23","172.16.4.0/23"
     private_newbits             = "3"
-    private_cidr_block          = "172.16.0.0/20"
+    private_cidr_block          = "172.16.16.0/20"
+    # 20 + 3 = /23 = "172.16.0.0/23","172.16.2.0/23","172.16.4.0/23"
+    # ipcalc 172.16.16.0/23 = 510 az1
+    # ipcalc 172.16.18.0/23 = 510 az2
     public_newbits              = "3"
-    public_cidr_block           = "172.16.16.0/20"
+    public_cidr_block           = "172.16.0.0/20"
+    # ipcalc 172.16.0.0/23 = 510 az1
+    # ipcalc 172.16.2.0/23 = 510 az2
     vpc_cidr_block              = "172.16.0.0/16"
     enable_dns_support          = true
     enable_dns_hostname         = true

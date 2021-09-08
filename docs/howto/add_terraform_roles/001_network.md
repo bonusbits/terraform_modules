@@ -1,4 +1,4 @@
-#### Last Updated v2.1.1 (09/07/2021)
+#### Last Updated v2.2.0 (09/07/2021)
 # HowTo: Create VPC + NAT Gateway
 After setup this is the first step to creating your environment.
 
@@ -80,11 +80,11 @@ terraform:
 1. Create stack tfvars folder
    1. ```mkdir $BB_ORCHESTRATOR_PATH/vars/terraform/myapp-dev-use1```
 2. Copy example Terraform tfvar files
-   1. ```cp -R $BB_ORCHESTRATOR_PATH/vars/terraform/examples/network.tfvars $BB_ORCHESTRATOR_PATH/vars/terraform/myapp-dev-use1/network.tfvars```
+   1. ```cp -R $BB_ORCHESTRATOR_PATH/vars/terraform/examples/network_512.tfvars $BB_ORCHESTRATOR_PATH/vars/terraform/myapp-dev-use1/network.tfvars```
 3. Edit any values needed in network.tfvars
 
 ## Create Network
 1. ```rake init[network]```
-   1. Select 1 <enter>
+   1. ```1 <enter>```
 1. ```rake plan[network]```
 1. ```rake apply[network]```

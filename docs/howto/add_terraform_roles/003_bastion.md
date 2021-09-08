@@ -1,4 +1,4 @@
-#### Last Updated v2.1.1 (09/07/2021)
+#### Last Updated v2.2.0 (09/07/2021)
 # HowTo: Add Bastion EC2 Instance Role
 
 ## Prerequisites
@@ -44,6 +44,8 @@ terraform:
     - cloudwatch_logs
     - bastion # <<
   tfvar_roles_path: vars/terraform/myapp-dev-use1
+  shared_tfvar_files:
+    - vars/secrets/myapp-shared/access_lists.tfvars
   s3_backend:
     bucket: myapp-tfv
     region: us-east-1
@@ -72,6 +74,6 @@ Create local SSH Key that will be used to create key pair in AWS
 
 ## Create Network
 1. ```rake init[bastion]```
-   1. Select 1 <enter>
+   1. ```1 <enter>```
 2. ```rake plan[bastion]```
 3. ```rake apply[bastion]```

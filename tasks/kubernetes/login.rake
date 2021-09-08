@@ -5,7 +5,7 @@ namespace :kubernetes do
       Orchestrator::ConsoleOutputs.header
       node_ip = Orchestrator::Kubernetes::Nodes.node_ip
       Orchestrator::ConsoleOutputs.sub_header_item('Kubernetes Login Node Group EC2 Instance', "#{node_ip}/eks/ec2-user")
-      Orchestrator::Bastion::Login.proxy_ip(node_ip, 'eks', 'ec2-user')
+      Orchestrator::Bastion::Login.proxy_ip(node_ip, 'eks', $project_vars['bastion']['login_user'], 'ec2-user')
     end
   end
 end

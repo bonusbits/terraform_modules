@@ -1,4 +1,4 @@
-[![Project Release](https://img.shields.io/badge/release-v2.1.1-blue.svg)](https://github.com/bonusbits/bonusbits_orchestrator)
+[![Project Release](https://img.shields.io/badge/release-v2.2.0-blue.svg)](https://github.com/bonusbits/bonusbits_orchestrator)
 [![Circle CI](https://circleci.com/gh/bonusbits/bonusbits_orchestrator/tree/master.svg?style=shield)](https://circleci.com/gh/bonusbits/bonusbits_orchestrator/tree/master)
 [![GitHub issues](https://img.shields.io/github/issues/bonusbits/bonusbits_orchestrator.svg)](https://github.com/bonusbits/bonusbits_orchestrator/issues)
 
@@ -18,5 +18,9 @@ Ruby CLI Wrapper for AWS, Chef, Docker, Terraform, Helm, Kubectl and Packer. Can
 
 ### Add Terraform Roles
 Add Terraform Roles to customize your environment
-* [Cloudwatch Log Groups](./docs/howto/add_terraform_roles/002_cloudwatch_logs.md)
-* [Bastion](./docs/howto/add_terraform_roles/003_bastion.md)
+1. [Cloudwatch Log Groups](./docs/howto/add_terraform_roles/002_cloudwatch_logs.md)
+2. [Bastion](./docs/howto/add_terraform_roles/003_bastion.md)
+3. [EKS Cluster](./docs/howto/add_terraform_roles/005_eks_cluster.md)
+4. [EKS Compute](./docs/howto/add_terraform_roles/006_eks_compute.md)
+5. [EKS Ingress Controller](./docs/howto/add_terraform_roles/007_eks_ingress_controller.md)
+6. [EKS Apps](./docs/howto/add_terraform_roles/008_eks_apps.md)
