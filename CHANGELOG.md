@@ -1,6 +1,9 @@
 ## CHANGE LOG
 BonusBits Orchestrator
 
+## 2.2.1 - 09/07/2021 - Levon Becker
+* Fixed tfvar rename
+
 ## 2.2.0 - 09/07/2021 - Levon Becker
 #### Minor Release: EKS + K8S
 * Added EKS modules
