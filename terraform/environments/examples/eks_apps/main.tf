@@ -41,6 +41,7 @@ module "k8s_service" {
 module "k8s_ingress" {
   for_each                      = var.eks_apps
   base_aws_tags                 = module.aws_tags.aws_tags
+  certificate_arn               = data.aws_acm_certificate.issued[each.key].arn
   public_access_cidrs           = local.public_access_cidrs
   source                        = "../../../modules/k8s_ingress"
   tf_vars                       = merge(

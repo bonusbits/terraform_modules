@@ -4,7 +4,7 @@ data "aws_region" "current" {}
 
 data "aws_acm_certificate" "issued" {
   for_each = var.eks_apps
-  domain   = var.eks_apps[each.key].ingress.cert_domain
+  domain   = var.eks_apps[each.key].ingress.cert_domain_name
   statuses = ["ISSUED"]
 }
 
