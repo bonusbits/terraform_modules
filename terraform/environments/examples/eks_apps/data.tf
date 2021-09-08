@@ -2,10 +2,11 @@ data "aws_region" "current" {}
 
 //data "aws_caller_identity" "current" {}
 
-//data "aws_acm_certificate" "issued" {
-//  domain   = "www.bonusbits.com"
-//  statuses = ["ISSUED"]
-//}
+data "aws_acm_certificate" "issued" {
+  for_each = var.eks_apps
+  domain   = var.eks_apps[each.key].ingress.cert_domain_name
+  statuses = ["ISSUED"]
+}
 
 # Set KUBE_CONFIG_PATH environment variable and the kubernetes provider automatically uses that path for config to authenticate to cluster.
 # https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs
