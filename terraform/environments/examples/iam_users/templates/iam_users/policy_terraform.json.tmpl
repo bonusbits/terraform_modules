@@ -1,0 +1,26 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "Head Bucket Access",
+      "Effect": "Allow",
+      "Action": "s3:HeadBucket",
+      "Resource": "*"
+    },
+    {
+      "Sid": "Automated Deployment Access",
+      "Effect": "Allow",
+      "Action": [
+        "batch:*",
+        "cloudwatch:*",
+        "ec2:*",
+        "ecr:*",
+        "ecs:*",
+        "eks:*",
+        "logs:*",
+        "s3:*"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
