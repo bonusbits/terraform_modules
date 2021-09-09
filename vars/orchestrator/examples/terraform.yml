@@ -1,0 +1,16 @@
+terraform:
+  roles:
+    - network
+    - cloudwatch_logs
+    - bastion
+    - eks_cluster
+    - eks_compute
+    - eks_ingress_controller
+    - eks_apps
+  tfvar_roles_path: vars/terraform/demo-dev-use1
+  shared_tfvar_files:
+    - vars/secrets/demo-dev-use1/access_lists.tfvars
+  s3_backend:
+    bucket: demo-tfs
+    region: us-east-1
+    key_prefix: workspaces

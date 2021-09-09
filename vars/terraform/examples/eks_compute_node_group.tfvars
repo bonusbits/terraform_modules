@@ -1,6 +1,6 @@
 eks_compute = {
   namespaces = {
-    my_app       = "my-app"
+    demo       = "demo"
   }
   node_groups             = {
     ami_type                    = "AL2_x86_64"

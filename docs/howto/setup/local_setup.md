@@ -1,4 +1,4 @@
-#### Last Updated v2.1.1 (09/07/2021)
+#### Last Updated: 09/07/2021
 # HowTo: Setup Local Workstation
 These are the steps to setup your devops workstation or CI worker to use the Orchestrator Tool.
 

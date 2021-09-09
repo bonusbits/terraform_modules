@@ -1,4 +1,4 @@
-#### Last Updated v2.1.1 (09/07/2021)
+#### Last Updated: 09/07/2021
 # HowTo: Create S3 Bucket for Terraform State Files
 Either manually create or use a CloudFormation template to create a bucket for the .tfstate files. This is a manual setup example.
 

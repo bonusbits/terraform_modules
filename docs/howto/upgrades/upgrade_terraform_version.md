@@ -1,5 +1,4 @@
-#### Last Updated v2.0.0 (08/25/2021)
-
+#### Last Updated: 08/25/2021
 # HowTo: Upgrade Terraform and Provider Versions
 It is best to keep up with the version upgrades for feature adds, bug fixes and so the upgrade is easier. It takes about 1 hour.
 

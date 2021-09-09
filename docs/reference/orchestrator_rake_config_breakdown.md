@@ -93,14 +93,14 @@ terraform:
 ### Template Files
 There are templates for each section to add to your environmental rake config.
 
-#### vars/orchestrator/templates/bonusbits.yml
+#### vars/orchestrator/examples/bonusbits.yml
 ```yaml
 bonusbits:
   ami_save_count: <integer>
   web_backup: <boolean>
 ```
 
-#### vars/orchestrator/templates/orchestrator.yml
+#### vars/orchestrator/examples/orchestrator.yml
 ```yaml
 orchestrator:
   environment: <string>
@@ -110,7 +110,7 @@ orchestrator:
     use_secrets_manager: <boolean>
 ```
 
-#### vars/orchestrator/templates/packer.yml
+#### vars/orchestrator/examples/packer.yml
 ```yaml
 packer:
   image_name_prepend: <string>
@@ -118,7 +118,7 @@ packer:
     - <list of aws region to copy ami too>
 ```
 
-#### vars/orchestrator/templates/terraform.yml
+#### vars/orchestrator/examples/terraform.yml
 ```yaml
 terraform:
   roles:

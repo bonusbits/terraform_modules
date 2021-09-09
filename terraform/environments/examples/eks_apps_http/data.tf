@@ -1,0 +1,14 @@
+data "aws_region" "current" {}
+
+# Set KUBE_CONFIG_PATH environment variable and the kubernetes provider automatically uses that path for config to authenticate to cluster.
+# https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs
+
+# For NAT IP List in Local
+data "terraform_remote_state" "network" {
+  backend                       = "s3"
+  config = {
+    bucket                      = var.s3_backend.bucket
+    region                      = var.s3_backend.region
+    key                         = "${var.s3_backend.key_prefix}/${terraform.workspace}/network.tfstate"
+  }
+}

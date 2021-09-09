@@ -17,8 +17,8 @@ module Orchestrator
         bastion_ip = Orchestrator::Bastion::Terraform.bastion_ip
         key_path = "#{$project_vars['orchestrator']['secrets_path']}/#{$project_vars['terraform']['workspace']}/#{$project_vars['bastion']['ssh_key_name']}"
 
-        # command = '[[ -f "/var/log/cloud-init-output.log" ]] && sudo grep -q "USER DATA COMPLETED" /var/log/cloud-init-output.log'
-        command = '[[ -f "/var/log/cloud-init-output.log" ]] && sudo grep -q "BOGUS" /var/log/cloud-init-output.log'
+        command = '[[ -f "/var/log/cloud-init-output.log" ]] && sudo grep -q "USER DATA COMPLETED" /var/log/cloud-init-output.log'
+        # command = '[[ -f "/var/log/cloud-init-output.log" ]] && sudo grep -q "BOGUS" /var/log/cloud-init-output.log'
         Orchestrator::ConsoleOutputs.debug_message_item('[Orchestrator::Bastion::Tests.tail_cloud_init_loop] command', command)
 
         print 'Checking Status '
