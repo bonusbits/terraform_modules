@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 
 # General
-script_version="1.0.0"
+script_version="1.0.1"
 download_path="/tmp"
+install_path="/opt/terraform"
 
 function help_message () {
 helpmessage="Description:
-  Upgrade Terraform Binary on Orchestrator Instance
+  Upgrade Terraform Binary on Linux
 
 Examples:
   Upgrade Terraform Binary to 1.0.1
@@ -73,6 +74,7 @@ function unzip_terraform() {
 function replace_terraform_binary() {
   echo ''
   echo 'INFO: Replacing Terraform Binary'
+  sudo mkdir -p $install_path
   sudo mv $download_path/terraform /opt/terraform
 }
 
