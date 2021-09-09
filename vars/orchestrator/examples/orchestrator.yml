@@ -1,0 +1,6 @@
+orchestrator:
+  environment: demo
+  feature_toggles:
+    debug: false
+    skip_all_prompts: false
+    use_secrets_manager: false

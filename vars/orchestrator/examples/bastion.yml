@@ -1,0 +1,3 @@
+bastion:
+  login_user: ubuntu
+  ssh_key_name: bastion

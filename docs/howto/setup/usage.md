@@ -1,5 +1,4 @@
-#### Last Updated v2.0.0 (08/25/2021)
-
+#### Last Updated: 08/25/2021
 # HowTo: Use Bonus Bits Orchestrator
 
 ## Prerequisites

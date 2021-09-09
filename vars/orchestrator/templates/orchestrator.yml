@@ -1,6 +1,0 @@
-orchestrator:
-  environment: <string>
-  feature_toggles:
-    debug: <boolean>
-    skip_all_prompts: <boolean>
-    use_secrets_manager: <boolean>

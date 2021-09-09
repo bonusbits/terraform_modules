@@ -1,6 +1,20 @@
 ## CHANGE LOG
 BonusBits Orchestrator
 
+## 2.2.2 - 09/08/2021 - Levon Becker
+* Added a ton more documentation
+* Fixed bastion_eip and bastion_lb example rules to not include the user data chef workstation version var
+* Wrote, Tested and debugged a project_setup/eks_stack.sh shell script for quick new project setup and creation in one command 
+* Fixed bastion:tests:tail_cloud_init_loop. Still has debug bogus search set.
+* Added two eks_apps tfvars
+  * eks_app_http.tfvars
+  * eks_app_https.tfvars
+* Changed demo stack to use eks_app_http.tfvars so I don't have to mess with tls certs for the demo
+* Fixed eks_app module to work if not passing a cert_domain_name for a none tls setup
+* Split eks_apps example role into eks_apps_http and eks_apps_https
+* Finally got around to better logic for loading all the rake and ruby files
+* Moved project/stack/environment tasks/libs under tasks/environments folder
+
 ## 2.2.1 - 09/07/2021 - Levon Becker
 * Fixed tfvar rename
 

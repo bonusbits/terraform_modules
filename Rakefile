@@ -11,46 +11,13 @@ require 'highline/import'
 require 'rubocop-rake'
 
 # Load Rake Task Helper Methods
-lib_dir_list = %w[
-  tasks/lib/*.rb
-  tasks/aws/lib/*.rb
-  tasks/bastion/lib/*.rb
-  tasks/bonusbits/lib/*.rb
-  tasks/helm/lib/*.rb
-  tasks/kubernetes/lib/*.rb
-  tasks/orchestrator/lib/*.rb
-  tasks/packer/lib/*.rb
-  tasks/packages/lib/*.rb
-  tasks/secrets/lib/*.rb
-  tasks/terraform/lib/*.rb
-  tasks/web/lib/*.rb
-]
-lib_dir_list.each do |dir|
-  Dir.glob(dir).each do |file|
-    require_relative file.gsub('.rb', '')
-  end
+Dir.glob('tasks/**/*.rb').each do |file|
+  require_relative file.gsub('.rb', '')
 end
 
 # Load all Rake Task Files
-rake_dir_list = %w[
-  tasks/*.rake
-  tasks/aws/*.rake
-  tasks/bastion/*.rake
-  tasks/bonusbits/*.rake
-  tasks/helm/*.rake
-  tasks/kubernetes/*.rake
-  tasks/orchestrator/*.rake
-  tasks/packer/*.rake
-  tasks/packages/*.rake
-  tasks/secrets/*.rake
-  tasks/terraform/*.rake
-  tasks/test/*.rake
-  tasks/web/*.rake
-]
-rake_dir_list.each do |dir|
-  Dir.glob(dir).each do |task_file|
-    load task_file
-  end
+Dir.glob('tasks/**/*.rake').each do |task_file|
+  load task_file
 end
 
 # Default Rake Task (rake <enter>)

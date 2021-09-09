@@ -6,8 +6,8 @@ network = {
     # Setup Availability Zone Count is max number or AZs to setup.
     # If Region has less that total count will be setup. such as Canada = 2 azs
     setup_az_count              = "3"
-    dhcp_domain_name            = "bonusbits.local"
-    dns_domain_name             = "bonusbits.local"
+    dhcp_domain_name            = "demo.local"
+    dns_domain_name             = "demo.local"
     private_newbits             = "3"
     private_cidr_block          = "10.60.64.0/18" # 2nd 1/4 of /16
     # ipcalc 10.60.64.0/21 = 2046 az1

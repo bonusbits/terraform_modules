@@ -1,5 +1,4 @@
-#### Last Updated v2.0.0 (08/25/2021)
-
+#### Last Updated: 08/25/2021
 # HowTo: Upgrade EKS Version In-Place
 It takes about 30 minutes and does cause a brief outage.
 
