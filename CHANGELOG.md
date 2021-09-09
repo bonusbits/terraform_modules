@@ -1,6 +1,23 @@
 ## CHANGE LOG
 BonusBits Orchestrator
 
+## 2.3.0 - 09/09/2021 - Levon Becker
+#### Minor Release: More Modules & Role Examples
+* Added New Terraform Modules
+  * ec2_asg
+  * efs
+  * iam_user
+  * s3_bucket
+  * sns_topic
+  * ssm_parameter
+  * target_group_attach_asg
+  * vpn_endpoint
+* Added Example Roles
+  * efs
+  * iam_users
+  * s3
+  * vpn_endpoint
+
 ## 2.2.2 - 09/08/2021 - Levon Becker
 * Added a ton more documentation
 * Fixed bastion_eip and bastion_lb example rules to not include the user data chef workstation version var
