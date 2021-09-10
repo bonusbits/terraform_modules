@@ -36,6 +36,7 @@ pkg/
 # Terraform
 **/crash.log
 **/.terraform/*
+**/.terraform*
 **/*.tfstate*
 **/override.tf
 **/override.tf.json
