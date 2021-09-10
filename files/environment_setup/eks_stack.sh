@@ -74,6 +74,8 @@ if [ ! -f $rake_target_path/$TF_WORKSPACE.yml ]; then
   echo '' >>  $rake_target_path/$TF_WORKSPACE.yml
   cat $rake_source_path/orchestrator.yml >> $rake_target_path/$TF_WORKSPACE.yml
   echo '' >>  $rake_target_path/$TF_WORKSPACE.yml
+  cat $rake_source_path/secrets.yml >> $rake_target_path/$TF_WORKSPACE.yml
+  echo '' >>  $rake_target_path/$TF_WORKSPACE.yml
   cat $rake_source_path/terraform.yml >> $rake_target_path/$TF_WORKSPACE.yml
 fi
 
