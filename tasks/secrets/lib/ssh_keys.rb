@@ -6,7 +6,7 @@ module Orchestrator
           Orchestrator::ConsoleOutputs.info_message_item('Already Created', "#{keys_path}/#{key_name}")
         else
           Orchestrator::ConsoleOutputs.info_message_item('Creating...', "#{keys_path}/#{key_name}")
-          system "ssh-keygen -q -t rsa -m pem -b 4096 -N '' -f #{keys_path}/#{key_name}"
+          system "ssh-keygen -q -t rsa -m pem -C '' -b 4096 -N '' -f #{keys_path}/#{key_name}"
         end
       end
 
@@ -15,7 +15,7 @@ module Orchestrator
           Orchestrator::ConsoleOutputs.info_message_item('Already Created', "#{keys_path}/#{key_name}")
         else
           Orchestrator::ConsoleOutputs.info_message_item('Creating...', "#{keys_path}/#{key_name}")
-          system "ssh-keygen -p -q -N '' -m pem -f #{keys_path}/#{key_name}"
+          system "ssh-keygen -p -q -N '' -m pem -C '' -f #{keys_path}/#{key_name}"
         end
       end
 

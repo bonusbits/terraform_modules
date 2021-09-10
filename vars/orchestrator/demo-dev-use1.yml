@@ -7,7 +7,11 @@ orchestrator:
   feature_toggles:
     debug: false
     skip_all_prompts: false
-    use_secrets_manager: false
+    use_secrets_manager: true
+
+secrets:
+  secrets_manager:
+    name: demo-dev-use1-devops
 
 terraform:
   roles:

@@ -1,6 +1,12 @@
 ## CHANGE LOG
 BonusBits Orchestrator
 
+## 2.3.1 - 09/09/2021 - Levon Becker
+* Added aws secrets manager setup doc
+* Added aws secrets manager secret example json
+* Added aws secret permission policy example json
+* Updated ssh key create to not include username or hostname
+
 ## 2.3.0 - 09/09/2021 - Levon Becker
 #### Minor Release: More Modules & Role Examples
 * Added New Terraform Modules
