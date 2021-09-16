@@ -18,7 +18,7 @@ module Orchestrator
           if File.exist?(file_path) && overwrite || !File.exist?(file_path)
             Orchestrator::ConsoleOutputs.debug_message_item('[Orchestrator::Secrets::TfVars.get_secrets_tfvars] file_path', file_path)
             Orchestrator::ConsoleOutputs.debug_message_item('[Orchestrator::Secrets::TfVars.get_secrets_tfvars] template_path', template_path)
-            Orchestrator::Erb.create_file(file_path, template_path, 0o644)
+            Orchestrator::Erb.create_file(file_path, 0o644, template_path, $secrets_tfvars)
           else
             Orchestrator::ConsoleOutputs.message_item('File Already Exists', file_path)
           end

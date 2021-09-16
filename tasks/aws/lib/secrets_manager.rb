@@ -82,6 +82,7 @@ module Orchestrator
         begin
           retries ||= 0
           Orchestrator::ConsoleOutputs.debug_message_item('[Orchestrator::AWS::SecretsManager.upload_secrets_json] retries', retries)
+          # TODO: Test if this will create if does not exist. Would have to add permissions...
           secrets_manager_client.put_secret_value({
                                                     secret_id: secret_name,
                                                     secret_string: secret_value

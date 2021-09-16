@@ -43,9 +43,9 @@ module Orchestrator
       if env_var_overrides_map['terraform'].nil? || env_var_overrides_map['terraform']['plugin_cache_dir'].nil?
         raise Orchestrator::ConsoleOutputs.error_message_item('Missing Environment Variable!', 'TF_PLUGIN_CACHE_DIR') if ENV['TF_PLUGIN_CACHE_DIR'].nil?
 
-        terraform_plugin_cache_dir = ENV['TF_PLUGIN_CACHE_DIR'].downcase
+        terraform_plugin_cache_dir = ENV['TF_PLUGIN_CACHE_DIR']
       else
-        terraform_plugin_cache_dir = env_var_overrides_map['terraform']['plugin_cache_dir'].downcase
+        terraform_plugin_cache_dir = env_var_overrides_map['terraform']['plugin_cache_dir']
       end
 
       # $project_vars = Hash.new # Done in Rakefile

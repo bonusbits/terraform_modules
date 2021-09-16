@@ -1,5 +1,23 @@
 namespace :secrets do
   namespace :secrets_manager do
+    desc 'Generate Secrets JSON File Locally for AWS Secrets Manager Upload'
+    task :generate_secrets_json, [:ssh_key_list, :overwrite] do |_task, args|
+      args.with_defaults(ssh_key_list: %w[bastion eks], overwrite: false)
+      Orchestrator::ConsoleOutputs.header
+      Orchestrator::ConsoleOutputs.sub_header_item('Generate Secrets JSON File Locally', "overwrite:#{args[:overwrite]}")
+      Orchestrator::Secrets::TfVars.generate_secrets_json(args[:overwrite], args[:overwrite])
+    end
+
+    desc 'Generate and Upload Secrets JSON to AWS Secrets Manager'
+    task :generate_and_upload_secrets, [:ssh_key_list, :overwrite] do |_task, args|
+      args.with_defaults(ssh_key_list: %w[bastion eks], overwrite: false)
+      Orchestrator::ConsoleOutputs.header
+      Orchestrator::ConsoleOutputs.sub_header_item('Generate Secrets JSON', "overwrite:#{args[:overwrite]}")
+      Orchestrator::Secrets::TfVars.generate_secrets_json(args[:overwrite], args[:overwrite])
+      Orchestrator::ConsoleOutputs.sub_header('Upload Secrets Value')
+      Orchestrator::Secrets::SecretsManager.upload_secrets
+    end
+
     desc 'Get TFVars Secrets and SSH Key Files and Create Locally from AWS Secrets Manager'
     task :get_secrets, [:overwrite] do |_task, args|
       args.with_defaults(overwrite: false)

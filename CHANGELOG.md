@@ -1,6 +1,12 @@
 ## CHANGE LOG
 BonusBits Orchestrator
 
+## 2.4.0 - 09/16/2021 - Levon Becker
+#### Minor: Secrets Manager Secret JSON Generator
+* Added aws secrets manager secrets.json generator task/lib (WIP)
+* Updated docs
+* Removed downcase on terraform cache path that could cause issues
+
 ## 2.3.1 - 09/09/2021 - Levon Becker
 * Added aws secrets manager setup doc
 * Added aws secrets manager secret example json
@@ -8,7 +14,7 @@ BonusBits Orchestrator
 * Updated ssh key create to not include username or hostname
 
 ## 2.3.0 - 09/09/2021 - Levon Becker
-#### Minor Release: More Modules & Role Examples
+#### Minor: More Modules & Role Examples
 * Added New Terraform Modules
   * ec2_asg
   * efs
@@ -69,12 +75,12 @@ BonusBits Orchestrator
 * Documentation updates to get caught up to this point
 
 ## 2.1.0 - 09/07/2021 - Levon Becker
-#### Minor Release: EIP Bastion
+#### Minor: EIP Bastion
 * Fixed bastion/login to get eip public ip correctly in orchestrator
 * Added bastion ec2 with public eip access instead of load balancer terraform role example bastion_eip
 
 ## 2.0.0 - 09/06/2021 - Levon Becker
-#### Major Release: Refactor - Fully Functioning
+#### Major: Refactor - Fully Functioning
 * Refactored a lot
 * Stripped down to only working code
   * aws_tags (dynamic solution)

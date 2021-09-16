@@ -21,6 +21,7 @@ Dir.glob('tasks/**/*.rake').each do |task_file|
 end
 
 # Default Rake Task (rake <enter>)
+# TODO: Find better solution to run rubocop without all the env var requirements. Not just for CI, but IDE console that doesn't auto load shell profiles etc.
 desc 'Alias (test:style:ruby:auto_correct)'
 task default: %w[test:style:ruby:auto_correct]
 
