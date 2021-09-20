@@ -2,6 +2,7 @@ terraform {
   required_version        = "~> 1.0.5"
   backend "s3" {
     key                   = "eks_apps.tfstate"
+    encrypt               = true
   }
   required_providers {
     aws                   = {

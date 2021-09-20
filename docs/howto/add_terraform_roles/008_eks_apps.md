@@ -4,7 +4,7 @@ Can be used spin up numerous pods with LB frontend. This one may need some custo
 
 ## Prerequisites
 1. [Local Setup](../setup/local_setup.md)
-2. [Create Terraform State File Bucket](../setup/s3_bucket_tfvars.md)
+2. [Create Terraform State File Bucket](../setup/s3_bucket_tfstate.md)
 3. [Network Role](./001_network.md)
 4. [Cloudwatch Logs Role](./002_cloudwatch_logs.md)
 5. [Bastion](./003_bastion.md)
