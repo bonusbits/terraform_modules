@@ -4,7 +4,7 @@ This includes all the setup to recreate an EKS myapp project stack as an example
 
 ## Prerequisites
 * [Local Setup](../setup/local_setup.md)
-* [Create Terraform State File Bucket](../setup/s3_bucket_tfvars.md)
+* [Create Terraform State File Bucket](../setup/s3_bucket_tfstate.md)
 
 ## New Environment Example Values
 We'll use the following for our new environment

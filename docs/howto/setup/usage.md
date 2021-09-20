@@ -3,7 +3,7 @@
 
 ## Prerequisites
 * [Local Setup](./local_setup.md)
-* [Create Terraform State Files Bucket](./s3_bucket_tfvars.md)
+* [Create Terraform State Files Bucket](./s3_bucket_tfstate.md)
 
 ### Display Current Orchestrator Environment
 ```bash

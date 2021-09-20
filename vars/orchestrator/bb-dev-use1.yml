@@ -26,6 +26,6 @@ terraform:
   shared_tfvar_files:
     - vars/secrets/bb-shared/access_lists.tfvars
   s3_backend:
-    bucket: bonusbits-tfs
+    bucket: bonusbits-tfstate
     region: us-west-2
     key_prefix: workspaces

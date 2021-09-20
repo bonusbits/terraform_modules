@@ -1,4 +1,4 @@
-[![Project Release](https://img.shields.io/badge/release-v2.3.1-blue.svg)](https://github.com/bonusbits/bonusbits_orchestrator)
+[![Project Release](https://img.shields.io/badge/release-v2.3.2-blue.svg)](https://github.com/bonusbits/bonusbits_orchestrator)
 [![Circle CI](https://circleci.com/gh/bonusbits/bonusbits_orchestrator/tree/master.svg?style=shield)](https://circleci.com/gh/bonusbits/bonusbits_orchestrator/tree/master)
 [![GitHub issues](https://img.shields.io/github/issues/bonusbits/bonusbits_orchestrator.svg)](https://github.com/bonusbits/bonusbits_orchestrator/issues)
 
@@ -10,7 +10,7 @@ Ruby CLI Wrapper for AWS, Chef, Docker, Terraform, Helm, Kubectl and Packer. Can
 ## HowTo
 ### Setup
 * [Local Setup](./docs/howto/setup/local_setup.md)
-* [Create Terraform State File Bucket](./docs/howto/setup/s3_bucket_tfvars.md)
+* [Create S3 Bucket for Terraform State Files](./docs/howto/setup/s3_bucket_tfstate.md)
 * [Usage](./docs/howto/setup/usage.md)
 
 ### Create Network
