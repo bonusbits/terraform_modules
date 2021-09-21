@@ -2,7 +2,7 @@ module Orchestrator
   module Terraform
     module Vars
       def self.create_import_maps_folder
-        keys_path = "#{$project_vars['orchestrator']['orchestrator_path']}/vars/import_maps/#{$project_vars['terraform']['workspace']}"
+        keys_path = "#{$project_vars['orchestrator']['orchestrator_path']}/vars/terraform/import_maps/#{$project_vars['terraform']['workspace']}"
         FileUtils.mkdir_p keys_path
         Orchestrator::ConsoleOutputs.info_message_item('Folder Created', keys_path)
       end
@@ -11,7 +11,7 @@ module Orchestrator
         require 'yaml'
         Orchestrator::ConsoleOutputs.sub_header_item('Loading Import Map', filename)
         # Orchestrator::ConsoleOutputs.debug_message_item('Orchestrator::Vars.File Name', file_name)
-        file_path = "#{$project_vars['orchestrator']['orchestrator_path']}/vars/import_maps/#{workspace}/#{filename}.yml"
+        file_path = "#{$project_vars['orchestrator']['orchestrator_path']}/vars/terraform/import_maps/#{workspace}/#{filename}.yml"
         Orchestrator::ConsoleOutputs.debug_message_item('[Orchestrator::Vars.yaml_vars] File Path', file_path)
         raise Orchestrator::ConsoleOutputs.error_message_item('[Orchestrator::Vars.yaml_vars] File Path Does Not Exist', file_path) unless File.exist?(file_path)
 
@@ -28,7 +28,7 @@ module Orchestrator
         $import_vars = Hash.new
         tf_roles.each do |role|
           Orchestrator::ConsoleOutputs.debug_message_item('[Orchestrator::Vars.load_import_maps] Role', role)
-          file_path = "#{$project_vars['orchestrator']['orchestrator_path']}/vars/import_maps/#{workspace}/#{role}.yml"
+          file_path = "#{$project_vars['orchestrator']['orchestrator_path']}/vars/terraform/import_maps/#{workspace}/#{role}.yml"
           Orchestrator::ConsoleOutputs.debug_message_item('[Orchestrator::Vars.load_import_maps] File Path', file_path)
           next unless File.exist?(file_path)
 
