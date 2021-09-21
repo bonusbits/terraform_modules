@@ -1,6 +1,10 @@
 ## CHANGE LOG
 BonusBits Orchestrator
 
+## 2.3.3 - 09/21/2021 - Levon Becker
+* Fixed create terraform import pathing
+* Added aws_org_accounts module
+
 ## 2.3.2 - 09/20/2021 - Levon Becker
 * Added CloudFormation Template for creating tfstate bucket
 * Added/Updated Documentation for the Tfstate S3 Bucket setup
@@ -76,7 +80,7 @@ BonusBits Orchestrator
 
 ## 2.1.0 - 09/07/2021 - Levon Becker
 #### Minor Release: EIP Bastion
-* Fixed bastion/login to get eip public ip correctly in orchestrator
+* Fixed bastion/login to get eip public ip correctly in BB_ORCHESTRATOR
 * Added bastion ec2 with public eip access instead of load balancer terraform role example bastion_eip
 
 ## 2.0.0 - 09/06/2021 - Levon Becker
