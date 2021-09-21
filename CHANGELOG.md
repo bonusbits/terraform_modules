@@ -1,6 +1,11 @@
 ## CHANGE LOG
 BonusBits Orchestrator
 
+## 2.3.4 - 09/21/2021 - Levon Becker
+* Added org_policy module
+* Added org_accounts & org_policies example roles
+* Renamed module aws_org_account to org_account
+
 ## 2.3.3 - 09/21/2021 - Levon Becker
 * Fixed create terraform import pathing
 * Added aws_org_accounts module

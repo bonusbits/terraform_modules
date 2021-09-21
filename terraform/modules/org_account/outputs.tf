@@ -1,4 +1,4 @@
-output aws_account {
+output organizations_account {
   value       = aws_organizations_account.default
   // object
 }

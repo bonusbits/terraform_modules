@@ -11,7 +11,7 @@ resource "aws_organizations_account" "default" {
   }
 }
 
-resource "aws_organizations_policy_attachment" "default" {
-  policy_id                     = var.service_control_policy_id
-  target_id                     = aws_organizations_account.default.id
-}
+//resource "aws_organizations_policy_attachment" "default" {
+//  policy_id                     = var.service_control_policy_id
+//  target_id                     = aws_organizations_account.default.id
+//}
