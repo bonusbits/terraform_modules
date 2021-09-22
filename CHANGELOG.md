@@ -1,6 +1,12 @@
 ## CHANGE LOG
 BonusBits Orchestrator
 
+## 2.3.6 - 09/22/2021 - Levon Becker
+* Added missing parent_id arg for org_account module
+* Fixed pathing for org_accounts and org_policies roles examples module path rename missed.
+* Added dynamic custom tagging to org_accounts role example. So each aws account can have custom tags.
+* The root account id can be used if no OUs are setup
+
 ## 2.3.5 - 09/22/2021 - Levon Becker
 * Fixed tag issue in org_account module
 
