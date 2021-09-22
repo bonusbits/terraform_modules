@@ -1,6 +1,9 @@
 ## CHANGE LOG
 BonusBits Orchestrator
 
+## 2.3.5 - 09/22/2021 - Levon Becker
+* Fixed tag issue in org_account module
+
 ## 2.3.4 - 09/21/2021 - Levon Becker
 * Added org_policy module
 * Added org_accounts & org_policies example roles
