@@ -1,6 +1,7 @@
 resource "aws_organizations_account" "default" {
   name                          = var.name
   email                         = var.email
+  parent_id                     = var.parent_id
   iam_user_access_to_billing    = var.iam_user_access_to_billing
   role_name                     = var.role_name
   tags                          = local.aws_tags

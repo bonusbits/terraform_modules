@@ -17,5 +17,5 @@ module "org_policies" {
   name                          = each.value.name
   type                          = each.value.type
   content                       = local.policies[each.key]
-  source                        = "../../../modules/aws_org_policy"
+  source                        = "../../../modules/org_policy"
 }
