@@ -1,4 +1,4 @@
-[![Project Release](https://img.shields.io/badge/release-v2.3.4-blue.svg)](https://github.com/bonusbits/bonusbits_orchestrator)
+[![Project Release](https://img.shields.io/badge/release-v2.3.5-blue.svg)](https://github.com/bonusbits/bonusbits_orchestrator)
 [![Circle CI](https://circleci.com/gh/bonusbits/bonusbits_orchestrator/tree/master.svg?style=shield)](https://circleci.com/gh/bonusbits/bonusbits_orchestrator/tree/master)
 [![GitHub issues](https://img.shields.io/github/issues/bonusbits/bonusbits_orchestrator.svg)](https://github.com/bonusbits/bonusbits_orchestrator/issues)
 
