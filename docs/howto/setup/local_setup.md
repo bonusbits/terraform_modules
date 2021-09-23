@@ -8,14 +8,14 @@ These are the steps to setup your devops workstation or CI worker to use the Orc
 ### Local Installs
 | Binary | Version |
 | :--- | :--- |
-| AWS CLI         | 2.2.30 |
+| AWS CLI         | 2.2.40 |
 | Chef Workstation (Ruby/Rake) | 21.7.545 (Higher or Lower may cause problems, not tested) - This gives us Ruby 3.0.2 and a ton of gems that we use. Easier than using something like RVM and installing all the gems. Easier to make sure everyone is the same version of Ruby and most gems. Plus doesn't mess with your |
 | Docker      | 20.10.8 |
-| Git Client      | 2.32.0 |
+| Git Client      | 2.33.0 |
 | JQ              | 1.6 |
 | Kubectl         | 1.21.4 |
-| Packer         | 1.7.4 |
-| Terraform       | 1.0.5 |
+| Packer         | 1.7.5 |
+| Terraform       | 1.0.7 |
 
 ### RubyGems
 | Gem | Version |
@@ -27,8 +27,8 @@ These are the steps to setup your devops workstation or CI worker to use the Orc
 ### Optional Installs
 | Binary | Version |
 | :--- | :--- |
-| Eksctl          | 0.60.0 |
-| Helm            | 3.6.3 |   
+| Eksctl          | 0.67.0 |
+| Helm            | 3.7.0 |   
 
 ## Installs
 ### AWS CLI
