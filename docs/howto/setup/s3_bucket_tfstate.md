@@ -12,6 +12,8 @@ This template enables versioning and server side encryption for a single bucket 
 
 
 #### Create Stack
+[Example Script](../../../files/environment_setup/s3_bucket_tfstate_demo.sh)
+
 First edit the values below then run it. 
 ```bash
 aws cloudformation create-stack --stack-name demo-tfstate-bucket \
