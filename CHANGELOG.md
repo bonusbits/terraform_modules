@@ -1,6 +1,10 @@
 ## CHANGE LOG
 BonusBits Orchestrator
 
+## 2.3.7 - 09/23/2021 - Levon Becker
+* Updated Terraform 1.0.5 > 1.0.7 minimum required version
+* Updated AWS provider 3.57 > 3.59 minimum required version
+
 ## 2.3.6 - 09/22/2021 - Levon Becker
 * Added missing parent_id arg for org_account module
 * Fixed pathing for org_accounts and org_policies roles examples module path rename missed.
